@@ -42,10 +42,10 @@ struct NewsWidgetsEntryView : View {
 
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+            Text("Je suis TK")
+            // Text(entry.date, style: .time)
 
-            Text("Favorite Emoji:")
+            Text("Mood rn:")
             Text(entry.configuration.favoriteEmoji)
         }
     }

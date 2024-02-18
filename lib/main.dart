@@ -247,14 +247,20 @@ class FavoritesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.all(20),
-          child: Text('You have '
-              '${paireList.length} favorites wordpairs'),
+          child: Text(
+            'You have ${paireList.length} favorites wordpairs',
+          ),
         ),
-        for (var pair in paireList) SmallCard(pair: pair)
+        Expanded(
+          child: ListView(
+            children: [for (var pair in paireList) SmallCard(pair: pair)],
+          ),
+        ),
       ],
     );
   }
